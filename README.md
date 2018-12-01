@@ -1,3 +1,4 @@
 # HTML video autoplay unexpected behaior
 
-[http://stefanoschrs.github.io/super-duper-train](http://stefanoschrs.github.io/super-duper-train)
+- On hard refresh the video doesn't autoplay, after the on normal refresh it works
+- `autoplay`, `muted` added to element
