@@ -1,10 +1,11 @@
-<video width="200" autoplay loop mute src="video.mp4"></video>
-  <script>
+<video width="200" autoplay="autoplay" loop="loop" muted="muted" src="video.mp4"></video>
+
+<script>
 (function () {
   const videoEl = document.createElement('video')
   videoEl.setAttribute('autoplay', 'autoplay')
   videoEl.setAttribute('loop', 'loop')
-  videoEl.setAttribute('mute', 'mute')
+  videoEl.setAttribute('muted', 'muted')
   videoEl.setAttribute('width', '200')
   videoEl.setAttribute('src', 'video.mp4')
   videoEl.addEventListener('loadstart', (ev) => console.log('loadstart', ev))
@@ -12,5 +13,7 @@
   videoEl.addEventListener('play', (ev) => console.log('play', ev))
 
   document.body.appendChild(videoEl)
+
+  setTimeout(() => document.body.appendChild(videoEl.cloneNode(true)), 1000)
 })()
-  </script>
+</script>
